@@ -2,9 +2,7 @@ package com.example.model;
 
 import com.example.model.contract.Game;
 import com.example.model.dto.OneRoundResponse;
-import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.Random;
 
 import static java.lang.String.valueOf;

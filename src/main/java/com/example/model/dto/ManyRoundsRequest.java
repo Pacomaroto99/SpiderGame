@@ -1,10 +1,15 @@
 package com.example.model.dto;
 
-public class ManyRoundsRequest extends OneRoundRequest{
+import java.util.List;
+
+public class ManyRoundsRequest {
+    private String gameName;
+    private List<Integer> stakes;
     private int numberOfRounds;
 
-    public ManyRoundsRequest(String gameName, int stake, int numberOfRounds) {
-        super(gameName, stake);
+    public ManyRoundsRequest(String gameName, List<Integer> stakes, int numberOfRounds) {
+        this.gameName = gameName;
+        this.stakes = stakes;
         this.numberOfRounds = numberOfRounds;
     }
 
@@ -12,7 +17,11 @@ public class ManyRoundsRequest extends OneRoundRequest{
         return numberOfRounds;
     }
 
-    public void setNumberOfRounds(int numberOfRounds) {
-        this.numberOfRounds = numberOfRounds;
+    public String getGameName() {
+        return gameName;
+    }
+
+    public List<Integer> getStakes() {
+        return stakes;
     }
 }
