@@ -1,4 +1,4 @@
-package com.example.model.dto;
+package com.example.model;
 
 public class OneRoundRequest {
     private String gameName;

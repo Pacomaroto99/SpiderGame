@@ -1,6 +1,6 @@
-package com.example.model;
+package com.example.game;
 
-import com.example.model.contract.Game;
+import com.example.game.contract.Game;
 
 public class GameFactory {
 
