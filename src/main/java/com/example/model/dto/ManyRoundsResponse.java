@@ -3,10 +3,12 @@ package com.example.model.dto;
 public class ManyRoundsResponse {
     private int sumOfAllStakes;
     private int sumOfAllWins;
+    private float rtp;
 
     public ManyRoundsResponse(int sumOfAllStakes, int sumOfAllWins) {
         this.sumOfAllStakes = sumOfAllStakes;
         this.sumOfAllWins = sumOfAllWins;
+        this.rtp = (float) sumOfAllWins /sumOfAllStakes;
     }
 
     public int getSumOfAllStakes() {
@@ -15,5 +17,9 @@ public class ManyRoundsResponse {
 
     public int getSumOfAllWins() {
         return sumOfAllWins;
+    }
+
+    public float getRtp() {
+        return rtp;
     }
 }

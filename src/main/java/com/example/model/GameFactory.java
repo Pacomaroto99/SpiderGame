@@ -8,7 +8,6 @@ public class GameFactory {
         if (gameName.equalsIgnoreCase("spiderGame")) {
             return new SpiderGame(gameName, stake);
         }
-        return null;
+        return null; //here can also be added validation
     }
-
 }

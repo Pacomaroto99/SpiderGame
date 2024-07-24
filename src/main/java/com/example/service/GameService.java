@@ -49,7 +49,6 @@ public class GameService {
 
     private static void validateGameName(String request) {
         if (!request.equalsIgnoreCase("spiderGame") ||
-                request.isEmpty() ||
                 request.isBlank()) {
 
             throw new NonExistingGameException("Game name is not valid");

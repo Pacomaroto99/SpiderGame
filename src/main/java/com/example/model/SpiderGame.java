@@ -48,5 +48,4 @@ public class SpiderGame implements Game {
 
         return new OneRoundResponse(gameName, stake, totalWin, traceOfGame.toString());
     }
-
 }
