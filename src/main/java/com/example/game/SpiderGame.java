@@ -1,7 +1,7 @@
-package com.example.model;
+package com.example.game;
 
-import com.example.model.contract.Game;
-import com.example.model.dto.OneRoundResponse;
+import com.example.game.contract.Game;
+import com.example.model.OneRoundResponse;
 
 import java.util.Random;
 

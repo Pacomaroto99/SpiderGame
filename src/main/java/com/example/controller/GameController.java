@@ -1,11 +1,10 @@
 package com.example.controller;
 
-import com.example.model.dto.ManyRoundsRequest;
-import com.example.model.dto.ManyRoundsResponse;
-import com.example.model.dto.OneRoundRequest;
-import com.example.model.dto.OneRoundResponse;
+import com.example.model.ManyRoundsRequest;
+import com.example.model.ManyRoundsResponse;
+import com.example.model.OneRoundRequest;
+import com.example.model.OneRoundResponse;
 import com.example.service.GameService;
-import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

@@ -2,12 +2,12 @@ package com.example.service;
 
 import com.example.exception.InvalidStakeException;
 import com.example.exception.NonExistingGameException;
-import com.example.model.GameFactory;
-import com.example.model.contract.Game;
-import com.example.model.dto.ManyRoundsRequest;
-import com.example.model.dto.ManyRoundsResponse;
-import com.example.model.dto.OneRoundRequest;
-import com.example.model.dto.OneRoundResponse;
+import com.example.game.GameFactory;
+import com.example.game.contract.Game;
+import com.example.model.ManyRoundsRequest;
+import com.example.model.ManyRoundsResponse;
+import com.example.model.OneRoundRequest;
+import com.example.model.OneRoundResponse;
 import org.springframework.stereotype.Service;
 
 @Service

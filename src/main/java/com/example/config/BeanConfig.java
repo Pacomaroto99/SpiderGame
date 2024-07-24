@@ -1,6 +1,6 @@
 package com.example.config;
 
-import com.example.model.GameFactory;
+import com.example.game.GameFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
