@@ -8,7 +8,7 @@ public class ManyRoundsResponse {
     public ManyRoundsResponse(int sumOfAllStakes, int sumOfAllWins) {
         this.sumOfAllStakes = sumOfAllStakes;
         this.sumOfAllWins = sumOfAllWins;
-        this.rtp = (float) sumOfAllWins /sumOfAllStakes;
+        this.rtp = (float) sumOfAllWins / sumOfAllStakes;
     }
 
     public int getSumOfAllStakes() {

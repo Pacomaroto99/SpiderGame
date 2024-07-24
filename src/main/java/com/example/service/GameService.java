@@ -19,7 +19,7 @@ public class GameService {
         this.factory = factory;
     }
 
-    public OneRoundResponse playAGame(OneRoundRequest request){
+    public OneRoundResponse playAGame(OneRoundRequest request) {
 
         Game game = factory.getGame(request.getGameName(), request.getStake());
         validateGameName(request.getGameName());
@@ -28,23 +28,23 @@ public class GameService {
         return game.start();
     }
 
-    public ManyRoundsResponse playManyRounds(ManyRoundsRequest request){
+    public ManyRoundsResponse playManyRounds(ManyRoundsRequest request) {
         Game game;
         int allStakes = 0;
         int allWins = 0;
 
         validateGameName(request.getGameName());
-        if (request.getNumberOfRounds() != request.getStakes().size()){
+        if (request.getNumberOfRounds() != request.getStakes().size()) {
             throw new InvalidStakeException("Stake array size must be equal to number of rounds");
         }
 
         for (int i = 0; i < request.getNumberOfRounds(); i++) {
             validateGameStake(request.getStakes().get(i));
-            game  = factory.getGame(request.getGameName(), request.getStakes().get(i));
+            game = factory.getGame(request.getGameName(), request.getStakes().get(i));
             allStakes += request.getStakes().get(i);
             allWins += game.start().getTotalWin();
         }
-        return new ManyRoundsResponse(allStakes, allWins) ;
+        return new ManyRoundsResponse(allStakes, allWins);
     }
 
     private static void validateGameName(String request) {
@@ -56,7 +56,7 @@ public class GameService {
     }
 
     private static void validateGameStake(int stake) {
-        if (stake % 11 != 0 || stake <= 0){
+        if (stake % 11 != 0 || stake <= 0) {
             throw new InvalidStakeException("Stake must be 11 or divisible by 11");
         }
     }

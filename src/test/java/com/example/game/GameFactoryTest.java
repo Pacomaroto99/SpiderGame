@@ -26,7 +26,7 @@ public class GameFactoryTest {
 
     @Test
     public void givenInvalidGameName_whenGetGame_thenReturnsNull() {
-        
+
         Game game = factory.getGame("invalidGame", 100);
 
         assertNull(game);
@@ -34,7 +34,7 @@ public class GameFactoryTest {
 
     @Test
     public void givenNullGameName_whenGetGame_thenReturnsNull() {
-        
+
         Game game = factory.getGame(null, 100);
 
         assertNull(game);
@@ -42,7 +42,7 @@ public class GameFactoryTest {
 
     @Test
     public void givenEmptyGameName_whenGetGame_thenReturnsNull() {
-        
+
         Game game = factory.getGame("", 100);
 
         assertNull(game);
@@ -50,7 +50,7 @@ public class GameFactoryTest {
 
     @Test
     public void givenGameNameWithDifferentCase_whenGetGame_thenReturnsSpiderGame() {
-        
+
         Game game = factory.getGame("SpiderGame", 100);
         OneRoundResponse finishedGame = game.start();
 

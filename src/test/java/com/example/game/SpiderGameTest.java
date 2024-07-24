@@ -16,7 +16,7 @@ public class SpiderGameTest {
     SpiderGame game;
 
     @BeforeEach
-    void setup(){
+    void setup() {
         game = new SpiderGame(gameName, stake);
     }
 
@@ -28,7 +28,7 @@ public class SpiderGameTest {
         assertNotNull(response);
         assertEquals(gameName, response.getGameName());
         assertEquals(stake, response.getStake());
-        assertNotEquals(response1.getTotalWin() , response.getTotalWin()); // not always true
+        assertNotEquals(response1.getTotalWin(), response.getTotalWin()); // not always true
         assertTrue(response.getTraceOfGame().contains("AB"));
         assertTrue(response.getTraceOfGame().contains("CE"));
     }

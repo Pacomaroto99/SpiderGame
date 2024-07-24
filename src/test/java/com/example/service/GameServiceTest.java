@@ -104,7 +104,7 @@ public class GameServiceTest {
     public void givenInvalidStakeInManyRounds_whenPlayManyRounds_thenThrowsException() {
         String gameName = "spiderGame";
         List<Integer> stakes = List.of(10);
-        ManyRoundsRequest request = new ManyRoundsRequest(gameName,  stakes, 3);
+        ManyRoundsRequest request = new ManyRoundsRequest(gameName, stakes, 3);
 
         assertThrows(InvalidStakeException.class, () -> service.playManyRounds(request));
     }
