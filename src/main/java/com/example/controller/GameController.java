@@ -32,6 +32,7 @@ public class GameController {
     public OneRoundResponse singleRound(@Validated @RequestBody OneRoundRequest oneRoundRequest) {
         return gameService.playAGame(oneRoundRequest);
     }
+
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "The spider find his path", content = {
                     @Content(mediaType = "application/json", schema = @Schema(implementation = ManyRoundsResponse.class))}),})
